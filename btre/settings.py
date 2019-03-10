@@ -79,12 +79,15 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+f = open("password.txt","r")
+password = f.read()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'btredb',
         'USER': 'postgres',
-        'PASSWORD': 'WL_PA6qh&a', # how to hide this?
+        'PASSWORD': password,
         'HOST': 'localhost'
     }
 }
